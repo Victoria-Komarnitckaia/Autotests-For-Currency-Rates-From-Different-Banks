@@ -16,6 +16,7 @@
         <qameta.allure>2.13.6</qameta.allure>
         <aspectj.version>1.9.4</aspectj.version>
         <lombok.version>1.18.10</lombok.version>
+        <allure.version>2.13.0</allure.version>
 
     </properties>
 

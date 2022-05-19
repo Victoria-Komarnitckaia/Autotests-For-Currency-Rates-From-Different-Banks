@@ -83,7 +83,6 @@ public abstract class ExchangePage {
             }
             collectExchangeRatesList.add(collectRow);
         }
-        System.out.println(collectExchangeRatesList);
         return collectExchangeRatesList;
     }
 
@@ -102,12 +101,10 @@ public abstract class ExchangePage {
             case "Банк покупает":
                 setBankOperation(getBuyOperationByBank());
                 currencyRateList = getCurrencyRateList(currencyName);
-                System.out.println(currencyRateList);
                 return currencyRateList;
             case "Банк продает":
                 setBankOperation(getSellOperationByBank());
                 currencyRateList = getCurrencyRateList(currencyName);
-                System.out.println(currencyRateList);
                 return currencyRateList;
             default:
                 throw new IllegalStateException("Unexpected value: " + "'" + currencyType + "'" +
@@ -134,13 +131,11 @@ public abstract class ExchangePage {
             if (currencyType.equals("Банк продает")) {
                 currencyRate = Collections.max(currencyRateList);
             }
-            System.out.println(currencyRate);
             return currencyRate;
 
         } catch (NoSuchElementException e) {
             System.out.println("Операции " + "'" + currencyType + "'" +
                     " и/или валюты " + "'" + currencyName + "'" + " не существует для данного банка");
-//            currencyRateList = null;
         }
         return currencyRate;
     }

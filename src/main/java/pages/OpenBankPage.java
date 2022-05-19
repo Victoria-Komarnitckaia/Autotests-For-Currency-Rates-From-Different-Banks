@@ -57,7 +57,6 @@ public class OpenBankPage extends ExchangePage {
                 .filter(x -> x.get(getHeaderCurrencyName()).contains(currencyName))
                 .map(x -> Double.parseDouble(x.get(getBankOperation()).replace(",", ".")))
                 .collect(Collectors.toList());
-        System.out.println(currencyRateList);
 
         return currencyRateList;
     }

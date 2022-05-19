@@ -1,6 +1,5 @@
 package tests;
 
-import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -42,6 +41,7 @@ public class Tests extends BaseTest {
         Steps.checkCurrencyRateBias(bankPages, urls, currencyName, currencyType, bias);
     }
 }
+
 
 
 

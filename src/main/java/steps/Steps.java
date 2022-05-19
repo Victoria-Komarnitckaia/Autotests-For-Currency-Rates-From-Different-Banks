@@ -103,7 +103,6 @@ public class Steps {
             collectResults.add(
                     page.getCurrencyRateListByOperation(currencyName, currencyType));
         }
-        System.out.println(collectResults);
 
         Assertions.assertFalse(collectResults.stream().anyMatch(x -> x.stream().anyMatch(w -> w >= bias)),
                 "НЕ на всех сайтах банков, среди указанных, курс " + currencyName + " не превышает " + bias);
@@ -150,9 +149,8 @@ public class Steps {
     private static List<Double> getSortedRatesList(Map<String, Double> collectedRates) {
 
         List<Double> list = new ArrayList<>(collectedRates.values());
-
         Collections.sort(list);
-        System.out.println(list);
+
         return list;
     }
 }

@@ -28,12 +28,7 @@ public class AlfaPage extends ExchangePage {
     protected String bankName = "Alfa";
 
 
-//    @Override
-//    public void preActions() {
-//        Waits.waitUntilElementBeVisible(selectorTableHeaders);
-////        прогрузка серого окна!!!!
-//    }
-//
+
     /**
      * более подробное описание метода тут {@link ExchangePage#getCurrencyRate(String, String)}
      *
@@ -52,7 +47,7 @@ public class AlfaPage extends ExchangePage {
                 sellOperationByBank,
                 bankName
         );
-        currencyRate= getUnprofitableCurrencyRateResult(currencyName, currencyType);
+        currencyRate = getUnprofitableCurrencyRateResult(currencyName, currencyType);
 
         return currencyRate;
     }
@@ -72,7 +67,6 @@ public class AlfaPage extends ExchangePage {
                         .split("₽")[0]
                         .replace(",", ".")))
                 .collect(Collectors.toList());
-        System.out.println(currencyRateList);
 
         return currencyRateList;
     }
@@ -96,13 +90,12 @@ public class AlfaPage extends ExchangePage {
                     clickOnCurrencyButton(currencyName);
                     currencyName = "RUB";
                     currencyRateList = getCurrencyRateList(currencyName);
-                    System.out.println(currencyRateList);
+//                    System.out.println(currencyRateList);
                     return currencyRateList;
                 case "Банк продает":
                     clickOnButton(rubSelector, visibleElemForRubButton);
                     currencyRateList = getCurrencyRateList(currencyName);
 
-                    System.out.println(currencyRateList);
                     return currencyRateList;
 
                 default:

@@ -1,6 +1,5 @@
 package pages;
 
-import driver.Waits;
 import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.By;
@@ -73,7 +72,6 @@ public class VtbPage extends ExchangePage {
             );
             collectExchangeRatesList.add(collectRow);
         }
-        System.out.println(collectExchangeRatesList);
         return collectExchangeRatesList;
     }
 
